@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<h2> You don't have sufficient money to go forward with this transfer!!</h2>
+
+<p> Please add money to your DBN account to proceed</p>
+</br>
+<a href="{{ url_for('create')}}">Try Again</a>
+
+
+{%endblock%}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<h2> There is no transaction associated with this DBN number</h2>
+<p> This could be because of two reasons:
+    <ul>
+        <li>One: There is no transaction done through this DBN number</li>
+        <li>Second: There is no account registered with this DBN number. In this case please create an account <a href="{{ url_for('newaccount')}}">here</a> to proceed </li>
+    </ul>
+</p>
+{%endblock%}

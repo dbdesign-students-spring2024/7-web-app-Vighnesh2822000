@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<h2>All Transactions</h2>
+<p>This page shows all the trasactions that have been initiated!
+</p>
+        
+   {% for doc in docs %}
+    <div>
+        <hr class="solid">
+        <p class="post">
+            Sent by {{doc.name}} to {{doc.rname}} at {{ doc.created_at.strftime("%H:%M on %d %B %Y") }}
+            <br/>
+            <a href="{{ url_for('edit',mongoid=doc._id)}}">Edit</a> | <a href="{{ url_for('delete',mongoid=doc._id)}}">Delete</a>
+            <br/>
+        </p>
+        <p>
+            Amount sent: {{doc.amount}}$
+        </p>
+        <p>
+            Message: {{ doc.message }}
+        </p>
+            
+    </div>
+    {%endfor%}
+    {% endblock %}

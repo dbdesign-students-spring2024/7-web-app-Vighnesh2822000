@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<h2>Create a New Account</h2>
+<p>Welcome to DBN Networks. Please enter the required details below to create your account.
+
+</p>
+<form method="POST" action="{{ url_for('newaccount_post') }}">
+  
+  <p>Your name: <input type="text" id="fname" name="fname" required/><br /></p>
+  <p>Age: <input type="number" id="fage" name="fage" required /><br/></p>
+  <p>Your address: <input type="text" id="faddress" name="faddress" required/><br /></p>
+  <p>Email: <input type="email" id="femail" name="femail" /><br /></p>
+  <p>Choose your DBN Number (Remember this number!!): <input type="number" id="fnumber" name="fnumber" min="1" required/><br /></p>
+  <p>If you want to add funds to your DBN account right way, please fill the rest of the information below. If not proceed to Create account!</p>
+  <p>Bank name: <input type="text" id="fbank" name="fbank" /><br /></p>
+  <p>Account Number: <input type="number" id="faccnumber" name="faccnumber" /><br /></p>
+  <p>Amount: <input type="number" id="famount" name="famount" value="0"/><br /></p>
+  <p>
+    Message:
+    <textarea type="text" id="fmessage" name="fmessage"></textarea>
+  </p>
+  <p>
+    <a href="{{ url_for('home')}}">Cancel</a>
+    <input type="submit" name="post-btn" value="Create Account" />
+  </p>
+</form>
+
+{%endblock%}

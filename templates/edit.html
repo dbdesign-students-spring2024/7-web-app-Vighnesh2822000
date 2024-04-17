@@ -1,11 +1,20 @@
 {% extends 'base.html' %} {% block container %}
 <h2>Update</h2>
-<p>Edit a record in the MongoDB database collection.</p>
+<p>Hi {{doc.name}},<br/>Update the updatable details below and press update to update our records. 
+  Mind you, you cannot change the receiver's DBN number or the amount!</p>
 <form method="POST" action="{{ url_for('edit_post', mongoid=mongoid) }}">
   <p>
-    Your name:
-    <input type="text" id="fname" name="fname" value="{{doc.name}}" /><br />
+    Receiver name:
+    <input type="text" id="rname" name="rname" value="{{doc.rname}}" /><br />
   </p>
+  <!--<p>
+    Receiver account number:
+    <input type="number" id="raccnumber" name="raccnumber" value="{{doc.raccnumber}}" /><br/>
+  </p>
+  <p>
+    Amount:
+    <input type="number" id="famount" name="famount" value="{{doc.amount}}" /><br/>
+  </p> -->
   <p>
     Message:
     <textarea id="fmessage" name="fmessage">{{doc.message}}</textarea>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<h2>UpdateTransaction</h2>
+<form method="POST" action="{{ url_for('update_record', mongoid=mongoid) }}">
+<p>Hi, updating a transaction requires you to input your DBN number</p>
+<p>Please enter here:<input type="number" id="dbnnumber" name="dbnnumber" /> <br/></p>
+<p>
+<input type="submit" name="check-btn" value="Check" />
+</p>
+
+
+{%endblock%}

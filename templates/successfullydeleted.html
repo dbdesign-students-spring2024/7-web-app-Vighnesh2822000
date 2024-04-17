@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+
+{% block container %}
+<h2> Your have successfully Deleted your transaction!</h2>
+
+<p> Mind you, you have deleted the record of your transaction and not the transaction itself. The money has already reached
+    it's destination. Thank you for using DBN. </p>
+</br>
+<a href="{{ url_for('home')}}">Home</a>
+{%endblock%}

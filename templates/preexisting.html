@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<h2> An account with your chosen DBN number already exists!!</h2>
+
+<p> You can proceed to use our service. You dont need to create another account.</p>
+<p>    If not please choose a different DBN number to create a new account.</p>
+</br>
+<a href="{{ url_for('newaccount')}}">Try Again</a>
+
+
+{%endblock%}

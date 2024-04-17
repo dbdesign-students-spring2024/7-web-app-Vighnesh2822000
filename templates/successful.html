@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<h2> You have successfully added money to your account {{docs.name}}!!</h2>
+
+<p> The total amount in you account is {{docs.amount}}$</p>
+</br>
+<a href="{{ url_for('home')}}">Home</a>
+
+
+{%endblock%}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+
+{% block container %}
+<h2> Your Account has been Created!!</h2>
+
+<p> Thank you for using DBN. Now you can transfer funds to peers who use DBN by adding money to your DBN account.</p>
+<p> If you want to start a new transaction, please click the button below.</p>
+</br>
+<a href="{{ url_for('create')}}">Send Money</a>
+{%endblock%}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+
+{% block container %}
+<h2> Your Transfer has been Initiated!!</h2>
+
+<p> Thank you for using DBN. Your transfer has been initiated, and will reach it's destination in exactly 24hrs.</p>
+<p> If you want to view all the transactions, please click the button below.</p>
+</br>
+<a href="{{ url_for('read')}}">View All Transactions</a>
+{%endblock%}
