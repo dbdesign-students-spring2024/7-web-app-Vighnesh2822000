@@ -10,7 +10,7 @@ And finally like venmo one can see all the transactions that happened between an
 
 ## Link
 - https://i6.cims.nyu.edu/~vd2058/7-web-app-Vighnesh2822000/flask.cgi
-- There is a problem from the server's side. My app ran well locally and after deploying it in i6, some python modules are not working!! "ModuleNotFoundError: No Module Named 'dotenv'". I've included a picture of it in my private chat.
+
 
 
 
